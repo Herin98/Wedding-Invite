@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8e7df">
+<meta name="description" content="Herin & Preya — wedding celebrations, 26–29 January 2027.">
+<title>Herin &amp; Preya — Wedding Celebrations</title>
+<link rel="preload" as="image" href="assets/hero-bg.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/opening-envelope.png">
+<link rel="preload" as="image" href="assets/open_envelope.png">
+<link rel="preload" as="image" href="assets/openinvitewithletter.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#A7193D;--burgundy:#7D1734;--peach:#F7D9CD;--blush:#F8E7E3;--lavender:#D9C6EC;--ivory:#FFF6E9;--gold:#C18A43;--green:#687C58;--ink:#765047;--shadow:0 18px 48px #562c2826;--serif:'Cormorant Garamond',Georgia,serif;--display:'Playfair Display',Georgia,serif;--sans:'Montserrat',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-snap-type:y proximity;scroll-padding-top:0}body{margin:0;color:var(--ink);background:#f7e4dd;font-family:var(--serif);overflow-x:hidden}button,a{font:inherit}button{cursor:pointer}a{color:inherit}img{display:block;max-width:100%}button:focus-visible,a:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+.page{position:relative;min-height:100svh;min-height:100vh;overflow:hidden;isolation:isolate;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;padding:clamp(24px,5vh,56px) 18px}.page::before{content:"";position:absolute;inset:0;z-index:-2;background-position:center;background-size:cover;background-repeat:no-repeat}.page::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#fff4e61a,#fff6e93d 60%,#fff4e64d)}
+/* Individual supplied artwork is the page background; no substitute scenery is drawn in CSS. */
+#cover::before{background-image:var(--bg-cover);background-position:center 44%;background-size:cover}
+#invitation::before{background-image:var(--bg-invitation);background-size:auto 100%;background-position:center;background-color:#f7e4dc}
+#scratch::before{background-image:var(--bg-scratch);background-position:center 48%;background-size:cover}
+#countdown::before{background-image:var(--bg-countdown);background-position:center 52%;background-size:cover}
+#events::before{background-image:var(--bg-events);background-position:center;background-size:auto 100%;background-color:#f8e7df}
+#gallery::before{background-image:var(--bg-gallery);background-position:center;background-size:auto 100%;background-color:#f8e7df}
+#locations::before{background-image:var(--bg-locations);background-position:center;background-size:auto 100%;background-color:#f8e7df}
+.eyebrow{font:500 9px/1.5 var(--sans);letter-spacing:.25em;text-transform:uppercase;color:#89564a}.ornament{display:flex;align-items:center;justify-content:center;gap:11px;color:var(--gold);margin:12px auto}.ornament::before,.ornament::after{content:"";width:52px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}.ornament::after{transform:scaleX(-1)}.ornament span{font-size:19px}.heading{font:400 clamp(36px,8vw,58px)/.98 var(--display);color:var(--rose);margin:8px 0 12px}.script{font-style:italic}.section-copy{font-size:17px;line-height:1.45;color:#80564d}.section-shell{width:min(100%,600px);position:relative;text-align:center}.small-note{font:500 9px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#875448}
+/* 1 — opening cover */
+#cover{padding:22px 16px 26px;align-items:flex-start}.cover-content{width:min(100%,540px);padding-top:clamp(7vh,12vh,120px);text-align:center}.cover-kicker{font:500 10px var(--sans);letter-spacing:.28em;text-transform:uppercase;color:#8a5148}.cover-title{font:400 clamp(38px,9.2vw,70px)/.95 var(--display);color:var(--rose);margin:14px 0 7px;text-shadow:0 1px 0 #fff8}.cover-title .amp{font-style:italic;color:var(--gold);font-size:.78em}.cover-subtitle{font:italic clamp(17px,4.2vw,24px) var(--serif);color:#8e5149;margin:0}.cover-rule{width:110px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:18px auto 0}
+.envelope-stage{position:relative;width:min(88vw,380px);aspect-ratio:2 / 3;margin:clamp(34px,7vh,76px) auto 0;perspective:1200px;filter:drop-shadow(0 18px 17px #633d3540);isolation:isolate}.envelope-art,.envelope-open-art{position:absolute;top:0;left:0;width:100%;height:auto;aspect-ratio:1.5;object-fit:contain;z-index:3;transition:opacity .8s ease}.envelope-open-art{opacity:0;z-index:4;filter:drop-shadow(0 12px 16px #633d3530)}.seal-art{position:absolute;z-index:5;width:23%;height:auto;left:50%;top:22.2%;transform:translate(-50%,-50%);filter:drop-shadow(0 5px 5px #64132e55);transition:transform .45s,opacity .4s}.open-hit{position:absolute;inset:0;z-index:8;border:0;background:transparent;border-radius:10px}.envelope-stage.seal-released .seal-art{transform:translate(-50%,-50%) scale(.28) rotate(-18deg);opacity:0}.envelope-stage.flap-open .envelope-art{opacity:0}.envelope-stage.flap-open .envelope-open-art{opacity:1}.envelope-stage.letter-emerging .envelope-open-art{opacity:0}.envelope-stage.opened .open-hit{display:none}.tap-instruction{margin:16px auto 0;display:flex;align-items:center;justify-content:center;gap:9px;color:#7f4d43;font:500 9px var(--sans);letter-spacing:.23em;text-transform:uppercase}.tap-instruction img{width:28px;height:26px;object-fit:contain;opacity:.9}.cover-bottom{margin-top:clamp(25px,5vh,45px);color:#885448;font-size:13px;font-style:italic}
+/* 2 — invitation card reveal */
+#invitation{padding:clamp(36px,8vh,80px) 20px;align-items:flex-start}.invitation-copy{width:min(100%,500px);margin:clamp(8vh,15vh,140px) auto 0;text-align:center;padding:18px 18px 28px;color:#795147;background:#fff6e9b8;backdrop-filter:blur(1px);border:1px solid #cda46f88;box-shadow:0 6px 25px #6d39201a}.invitation-copy::before{content:"";position:absolute;inset:6px;border:1px solid #cda46f66;pointer-events:none}.invitation-copy p{font-size:clamp(17px,4.5vw,23px);line-height:1.35;margin:4px 0}.invitation-copy .names{font:italic clamp(36px,9vw,58px)/1.05 var(--display);color:var(--rose);margin:13px 0 8px}.invitation-copy .celebration{font:500 11px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#96604e}.invitation-copy .ornament{margin:18px auto}
+/* 3 — scratch date */
+#scratch{padding:30px 16px}.scratch-shell{width:min(100%,500px);text-align:center;padding:24px 18px 30px;background:#fff5e8d9;border:1px solid #c18a43a6;box-shadow:var(--shadow);backdrop-filter:blur(2px)}.scratch-shell::before{content:"";position:absolute;inset:7px;border:1px solid #d2a66d;pointer-events:none}.scratch-shell .heading{font-size:clamp(39px,9vw,58px)}.scratch-subtitle{font:500 9px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#89554a}.scratch-pad{position:relative;width:min(100%,430px);aspect-ratio:1.9;margin:28px auto 0;display:grid;place-items:center;overflow:visible}.scratch-date{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff1dd;border:1px solid #d3a36c;color:var(--rose);box-shadow:inset 0 0 0 5px #fff7e9}.scratch-date strong{font:italic clamp(25px,7vw,39px) var(--display);font-weight:400}.scratch-date span{font:500 9px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-top:8px;color:#8c5a4c}.scratch-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;z-index:2}.scratch-hand{position:absolute;width:68px;height:65px;object-fit:contain;right:-10px;bottom:-26px;z-index:3;pointer-events:none;filter:drop-shadow(0 3px 5px #63352c33);animation:handNudge 1.8s ease-in-out infinite}.scratch-pad.done .scratch-canvas{opacity:0;transition:opacity .65s;pointer-events:none}.scratch-pad.done .scratch-date{animation:dateBloom .7s ease both}@keyframes handNudge{50%{transform:translate(-5px,-4px) rotate(-5deg)}}@keyframes dateBloom{from{transform:scale(.97);opacity:.75}to{transform:scale(1);opacity:1}}
+/* 4 — countdown */
+#countdown{padding:28px 16px}.count-shell{width:min(100%,510px);padding:34px 16px 26px;text-align:center;background:#fff4e7d9;border:1px solid #c18a437d;box-shadow:var(--shadow);backdrop-filter:blur(2px)}.count-shell .heading{font-size:clamp(34px,8vw,51px);line-height:1.05}.count-date{font:500 10px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#89594c}.count-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:30px auto 25px;max-width:450px}.time-tile{min-width:0;padding:17px 3px 13px;border-radius:17px;background:#fff9f0e8;border:1px solid #dfbd94;box-shadow:0 6px 16px #7c3d2514}.time-tile strong{display:block;font:400 clamp(25px,6.5vw,42px)/1 var(--display);color:var(--rose);font-variant-numeric:tabular-nums}.time-tile span{display:block;margin-top:9px;font:500 8px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#8b645a}.down-arrow{display:inline-grid;place-items:center;width:43px;height:43px;border-radius:50%;border:1px solid #c18a43;background:#fff6e8;color:var(--rose);text-decoration:none;font-size:23px;transition:transform .2s}.down-arrow:hover{transform:translateY(3px)}
+/* 5 — event timeline */
+#events{padding:30px 15px}.events-shell{width:min(100%,600px);padding:27px 18px 25px;background:#fff6e9d9;border:1px solid #c18a4388;box-shadow:var(--shadow)}.events-shell::before{content:"";position:absolute;inset:7px;border:1px solid #d1a56d;pointer-events:none}.section-heading{text-align:center;margin:0 auto 20px}.section-heading .heading{font-size:clamp(36px,8vw,51px)}.event-list{display:grid;gap:10px}.event-row{display:grid;grid-template-columns:76px minmax(0,1fr) 28px;gap:11px;align-items:center;padding:8px 9px;border:1px solid #e2c69e;border-radius:12px;background:#fffaf1e8;min-height:91px}.event-art{width:72px;height:72px;object-fit:contain;padding:3px}.event-info{text-align:left;min-width:0}.event-info h3{font:500 20px/1.05 var(--display);color:var(--rose);margin:0 0 6px}.event-info p{font:500 9px/1.45 var(--sans);color:#81685e;margin:2px 0;overflow-wrap:anywhere}
+/* 6 — gallery collage */
+#gallery{padding:28px 14px}.gallery-shell{width:min(100%,540px);text-align:center}.gallery-shell .section-heading{margin-bottom:12px}.gallery-shell .section-heading .heading{font-size:clamp(35px,8vw,52px)}.gallery-collage{position:relative;width:100%;aspect-ratio:0.8;background:var(--bg-gallery) center/100% 100% no-repeat}.photo-slot{position:absolute;overflow:hidden;border:5px solid #fff9ef;border-radius:24px 24px 13px 13px;background:linear-gradient(145deg,#fff8ee,#f4dfd0);box-shadow:0 7px 17px #6d3a2b2c;display:grid;place-items:center;color:#9a7165}.photo-slot::before{content:"";position:absolute;inset:4px;border:1px dashed #d8b68d;border-radius:17px 17px 8px 8px}.photo-slot .placeholder{font:italic 13px var(--serif);z-index:1;padding:8px}.photo-slot img{width:100%;height:100%;object-fit:cover}.slot-one{left:14%;top:26%;width:31%;height:25%;transform:rotate(-4deg)}.slot-two{right:13%;top:27%;width:28%;height:20%;transform:rotate(3deg)}.slot-three{right:13%;top:42%;width:34%;height:23%;transform:rotate(-3deg)}.slot-four{left:15%;top:57%;width:28%;height:21%;transform:rotate(2deg)}.slot-five{left:35%;top:75%;width:34%;height:17%;transform:rotate(1deg)}
+/* 7 — locations */
+#locations{padding:28px 15px;align-items:center}.locations-shell{width:min(100%,570px);padding:26px 16px 24px;background:#fff7e9e0;border:1px solid #c18a4388;box-shadow:var(--shadow);backdrop-filter:blur(2px)}.locations-shell::before{content:"";position:absolute;inset:7px;border:1px solid #d1a56d;pointer-events:none}.locations-shell .section-heading{margin-bottom:17px}.location-list{display:grid;gap:11px}.location-card{display:grid;grid-template-columns:106px minmax(0,1fr);gap:12px;align-items:stretch;padding:8px;border:1px solid #dfc39d;border-radius:12px;background:#fffaf1ed;min-height:112px}.location-thumb{width:106px;height:100%;min-height:96px;object-fit:cover;border-radius:8px}.location-copy{text-align:left;min-width:0;display:flex;flex-direction:column;justify-content:center}.location-copy h3{font:500 20px/1.05 var(--display);color:var(--rose);margin:0 0 5px}.location-copy p{font:500 9px/1.5 var(--sans);color:#82695f;margin:1px 0;overflow-wrap:anywhere}.location-actions{display:flex;align-items:center;gap:9px;margin-top:8px;flex-wrap:wrap}.map-button{display:inline-flex;align-items:center;gap:5px;border:1px solid #cda36e;border-radius:20px;padding:5px 10px;background:#fff6e7;color:#7f4e43;text-decoration:none;font:500 8px var(--sans);letter-spacing:.05em;text-transform:uppercase}.location-arrow{margin-left:auto;width:26px;height:26px;border:1px solid #d7b17e;border-radius:50%;display:grid;place-items:center;text-decoration:none;color:var(--rose);font-size:18px}.footer-note{margin:20px 0 0;text-align:center;color:#87584d;font-size:14px;font-style:italic}.footer-note a{text-decoration:none}
+/* Navigation and scroll reveal */
+.site-nav{position:fixed;z-index:30;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:9px 15px;background:#fff6e9e8;border-bottom:1px solid #c18a4350;backdrop-filter:blur(12px);transform:translateY(-110%);transition:transform .45s}.site-nav.visible{transform:translateY(0)}.nav-brand{font:italic 20px var(--display);color:var(--burgundy);text-decoration:none}.nav-brand em{color:var(--gold)}.nav-links{display:flex;gap:12px}.nav-links a{font:500 8px var(--sans);letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:#80584d}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.page-index{position:absolute;bottom:13px;left:0;right:0;text-align:center;font:500 8px var(--sans);letter-spacing:.22em;color:#80544880}
+@media(min-width:760px){.page{padding:55px 28px}.page::before{background-size:auto 100%;background-color:#f8e7df}#cover::before{background-size:auto 100%}.cover-content{padding-top:8vh}.envelope-stage{width:min(34vw,420px);margin-top:5vh}#invitation::before{background-size:auto 100%}.invitation-copy{margin-top:13vh;width:470px}.scratch-shell,.count-shell,.events-shell,.locations-shell{padding:38px 30px}.events-shell{width:580px}.event-row{grid-template-columns:86px minmax(0,1fr) 30px;padding:9px 12px}.event-art{width:82px;height:78px}.event-info h3{font-size:23px}.event-info p{font-size:10px}.gallery-shell{width:min(52vw,540px)}.locations-shell{width:560px}.location-card{grid-template-columns:125px minmax(0,1fr)}.location-thumb{width:125px}}
+@media(max-width:360px){.cover-title{font-size:36px}.envelope-stage{width:91vw}.count-grid{gap:5px}.time-tile{padding:14px 1px 11px}.time-tile span{font-size:7px}.event-row{grid-template-columns:62px minmax(0,1fr) 25px;gap:8px}.event-art{width:60px;height:62px}.event-info h3{font-size:18px}.location-card{grid-template-columns:88px minmax(0,1fr);gap:9px}.location-thumb{width:88px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* The portrait artwork is reserved from the first paint so opening never
+   changes the page layout. Only composited layers animate. */
+.envelope-letter-art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:4;opacity:0;visibility:hidden;transform:translateY(22px) scale(.97);filter:drop-shadow(0 14px 18px #633d3530);transition:opacity .8s ease,transform 1s cubic-bezier(.22,.76,.18,1),visibility 0s linear .8s}
+.envelope-stage.letter-emerging .envelope-letter-art{opacity:1;visibility:visible;transform:translateY(0) scale(1);transition:opacity .8s ease,transform 1s cubic-bezier(.22,.76,.18,1),visibility 0s}
+.letter-copy{position:absolute;z-index:5;left:15%;right:15%;top:12%;height:42%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#795147;opacity:0;transform:translateY(10px);transition:opacity .8s ease .35s,transform .8s ease .35s;pointer-events:none}
+.letter-copy p{margin:1px 0;font:400 clamp(11px,3.1vw,17px)/1.15 var(--serif)}
+.letter-copy strong{margin:8px 0 5px;font:italic clamp(22px,6.5vw,37px)/1 var(--display);font-weight:400;color:var(--rose)}
+.letter-copy strong em{color:var(--gold);font-weight:400}
+.letter-copy span{font:500 clamp(7px,1.8vw,10px) var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#96604e}
+.envelope-stage.letter-settled .letter-copy{opacity:1;transform:none}
+.envelope-stage.seal-released + .tap-instruction{opacity:0;transform:translateY(-5px);pointer-events:none}
+.envelope-stage.opened + .tap-instruction{opacity:.82;transform:none;pointer-events:auto}
+.tap-instruction{transition:opacity .3s ease,transform .3s ease}
+#cover{overflow-anchor:none}
+#gallery::before{background-image:var(--bg-events)}
+.gallery-collage{background:none}
+.slot-one{left:10%;top:14%;width:36%;height:28%}
+.slot-two{right:8%;top:14%;width:34%;height:23%}
+.slot-three{right:8%;top:46%;width:38%;height:25%}
+.slot-four{left:10%;top:54%;width:33%;height:24%}
+.slot-five{left:32%;top:77%;width:38%;height:31%}
+.slot-one{transform:rotate(-4deg) scale(1.4)}
+.slot-two{transform:rotate(3deg) scale(1.4)}
+.slot-three{transform:rotate(-3deg) scale(1.4)}
+.slot-four{transform:rotate(2deg) scale(1.4)}
+.slot-five{transform:rotate(1deg) scale(1.4)}
+.slot-two img{object-fit:contain !important;object-position:center bottom !important;background:#f4dfd0}
+.slot-five img{object-fit:cover !important;object-position:center center !important}
+@media(min-width:760px){.envelope-stage{width:min(34vw,420px)}.letter-copy p{font-size:17px}.letter-copy strong{font-size:37px}.letter-copy span{font-size:10px}}
+</style>
+</head>
+<body>
+<nav class="site-nav" id="siteNav" aria-label="Wedding invitation navigation"><a class="nav-brand" href="#cover">Herin <em>&amp;</em> Preya</a><div class="nav-links"><a href="#events">Events</a><a href="#gallery">Photos</a><a href="#locations">Locations</a></div></nav>
+<main>
+<!-- PAGE 1: OPENING COVER -->
+<section class="page" id="cover" aria-label="Opening wedding invitation">
+ <div class="cover-content">
+  <h1 class="cover-title">Herin <span class="amp">&amp;</span> Preya</h1>
+  <p class="cover-subtitle" id="heroSubtitle"></p>
+  <div class="cover-rule"></div>
+  <div class="envelope-stage" id="envelopeStage" aria-label="Sealed wedding invitation envelope">
+   <img class="envelope-art" data-asset="envelope.body" alt="Ivory wedding envelope with ornate gold detailing" fetchpriority="high">
+   <img class="envelope-open-art" data-asset="envelope.open" alt="Wedding invitation letter emerging from the envelope" aria-hidden="true">
+   <img class="envelope-letter-art" data-asset="envelope.letter" alt="Wedding invitation letter raised from the envelope" aria-hidden="true">
+   <div class="letter-copy" aria-hidden="true"><p>With love in our hearts,</p><p>we invite you to celebrate</p><p>our</p><strong>Herin <em>&amp;</em> Preya</strong><span>Wedding Celebrations</span></div>
+   <img class="seal-art" data-asset="envelope.seal" alt="H and P burgundy wax seal">
+   <button class="open-hit" id="openInvite" type="button" aria-label="Open the wedding invitation"></button>
+  </div>
+  <div class="tap-instruction" id="tapInstruction"><img data-asset="scratch.hand" alt=""><span>Tap to open</span></div>
+ </div>
+ <div class="page-index">01 / 06</div>
+</section>
+<!-- PAGE 2: SCRATCH TO REVEAL -->
+<section class="page" id="scratch" aria-label="Scratch to reveal the wedding date">
+ <div class="scratch-shell reveal">
+  <div class="ornament"><span>❦</span></div>
+  <h2 class="heading">Our Wedding</h2>
+  <div class="scratch-subtitle">Scratch to reveal the date</div>
+  <div class="scratch-pad" id="scratchPad">
+   <div class="scratch-date"><strong>29 Jan 2027</strong><span>Friday · 8:00 PM IST</span></div>
+   <canvas class="scratch-canvas" id="scratchCanvas" aria-label="Scratch the gold surface to reveal the wedding date"></canvas>
+   <img class="scratch-hand" data-asset="scratch.hand" alt="Hand gesture indicating where to scratch">
+  </div>
+ </div>
+ <div class="page-index">02 / 06</div>
+</section>
+<!-- PAGE 3: COUNTDOWN -->
+<section class="page" id="countdown" aria-label="Wedding countdown">
+ <div class="count-shell reveal">
+  <div class="ornament"><span>❦</span></div>
+  <h2 class="heading script">Counting down<br>to our forever</h2>
+  <div class="count-date">29 January 2027 · 8:00 PM IST</div>
+  <div class="count-grid" aria-live="off">
+   <div class="time-tile"><strong id="days">--</strong><span>Days</span></div>
+   <div class="time-tile"><strong id="hours">--</strong><span>Hours</span></div>
+   <div class="time-tile"><strong id="minutes">--</strong><span>Minutes</span></div>
+   <div class="time-tile"><strong id="seconds">--</strong><span>Seconds</span></div>
+  </div>
+  <a class="down-arrow" href="#events" aria-label="Scroll to wedding events">⌄</a>
+ </div>
+ <div class="page-index">03 / 06</div>
+</section>
+<!-- PAGE 4: EVENTS TIMELINE -->
+<section class="page" id="events" aria-label="Wedding celebrations and event timeline">
+ <div class="events-shell reveal">
+  <div class="section-heading"><div class="ornament"><span>❦</span></div><h2 class="heading">Wedding Celebrations</h2></div>
+  <div class="event-list">
+   <article class="event-row"><img class="event-art" data-asset="events.0" alt="Sitar and tabla floral illustration" loading="lazy"><div class="event-info"><h3>Sangeet Sandhya</h3><p>26 Jan 2027 · Tuesday</p><p>4:00 PM · Home</p></div></article>
+   <article class="event-row"><img class="event-art" data-asset="events.1" alt="Haldi bowl with marigolds illustration" loading="lazy"><div class="event-info"><h3>Haldi</h3><p>28 Jan 2027 · Thursday</p><p>10:00 AM · Prasanth Party Plot</p></div></article>
+   <article class="event-row"><img class="event-art" data-asset="events.2" alt="Traditional puja kalash illustration" loading="lazy"><div class="event-info"><h3>Gruh Santak</h3><p>28 Jan 2027 · Thursday</p><p>4:00 PM · Prasanth Party Plot</p></div></article>
+   <article class="event-row"><img class="event-art" data-asset="events.3" alt="Floral champagne glasses illustration" loading="lazy"><div class="event-info"><h3>Reception</h3><p>28 Jan 2027 · Thursday</p><p>7:30 PM · Prasanth Party Plot</p></div></article>
+   <article class="event-row"><img class="event-art" data-asset="events.4" alt="Wedding mandap with ceremonial fire illustration" loading="lazy"><div class="event-info"><h3>Wedding</h3><p>29 Jan 2027 · Friday</p><p>8:00 PM · Kribhco township, Surat</p></div></article>
+  </div>
+ </div>
+ <div class="page-index">04 / 06</div>
+</section>
+<!-- PAGE 5: COUPLE PHOTO COLLAGE — add real photos in the configuration below -->
+<section class="page" id="gallery" aria-label="Herin and Preya photo gallery">
+ <div class="gallery-shell reveal">
+  <div class="section-heading"><div class="ornament"><span>❦</span></div><h2 class="heading">Herin &amp; Preya</h2><p class="small-note">Two Souls, One Beautiful Journey</p></div>
+  <div class="gallery-collage" id="galleryCollage" aria-label="Five photograph collage">
+   <div class="photo-slot slot-one" data-photo="0"><span class="placeholder">Photo 01</span></div>
+   <div class="photo-slot slot-two" data-photo="1"><span class="placeholder">Photo 02</span></div>
+   <div class="photo-slot slot-three" data-photo="2"><span class="placeholder">Photo 03</span></div>
+   <div class="photo-slot slot-four" data-photo="3"><span class="placeholder">Photo 04</span></div>
+   <div class="photo-slot slot-five" data-photo="4"><span class="placeholder">Photo 05</span></div>
+  </div>
+ </div>
+ <div class="page-index">05 / 06</div>
+</section>
+<!-- PAGE 6: LOCATIONS -->
+<section class="page" id="locations" aria-label="Wedding locations">
+ <div class="locations-shell reveal">
+  <div class="section-heading"><div class="ornament"><span>❦</span></div><h2 class="heading">Locations</h2></div>
+  <div class="location-list">
+   <article class="location-card"><img class="location-thumb" data-asset="locations.0" alt="Palace courtyard garden" loading="lazy"><div class="location-copy"><h3>Our Home</h3><p>Sangeet Sandhya</p><p>26 Jan 2027 · 4:00 PM</p><div class="location-actions"><a class="map-button" data-map="home" href="https://goo.gl/maps/rrowMPsGNoxm8QmE7?g_st=ac">View on Maps</a><a class="location-arrow" data-map="home" href="https://goo.gl/maps/rrowMPsGNoxm8QmE7?g_st=ac" aria-label="Open map for Our Home">›</a></div></div></article>
+   <article class="location-card"><img class="location-thumb" data-asset="locations.1" alt="Blush palace reception hall" loading="lazy"><div class="location-copy"><h3>Reception Hall</h3><p>Haldi | Gruh Santak | Reception</p><p>Prasanth Party Plot</p><p>28 Jan 2027</p><div class="location-actions"><a class="map-button" data-map="reception" href="https://maps.app.goo.gl/W6nywfBVJWuUYssq5?g_st=ac">View on Maps</a><a class="location-arrow" data-map="reception" href="https://maps.app.goo.gl/W6nywfBVJWuUYssq5?g_st=ac" aria-label="Open map for Reception Hall">›</a></div></div></article>
+   <article class="location-card"><img class="location-thumb" data-asset="locations.2" alt="Lakeside wedding mandap" loading="lazy"><div class="location-copy"><h3>Wedding Place</h3><p>Wedding</p><p>Kribhco township, Surat</p><p>29 Jan 2027 · 8:00 PM</p><div class="location-actions"><a class="map-button" data-map="wedding" href="https://maps.app.goo.gl/AknF6hR4yBXC7Xkw7?g_st=ac">View on Maps</a><a class="location-arrow" data-map="wedding" href="https://maps.app.goo.gl/AknF6hR4yBXC7Xkw7?g_st=ac" aria-label="Open map for Wedding Place">›</a></div></div></article>
+  </div>
+  <p class="footer-note">With love, Herin &amp; Preya<br><a href="https://wa.me/917984859209" target="_blank" rel="noopener">WhatsApp · +91 7984859209 (Bhavesh Gandhi)</a></p>
+ </div>
+ <div class="page-index">06 / 06</div>
+</section>
+</main>
+<script>
+/* ======================== CENTRAL ASSET MANIFEST ======================== */
+const ASSETS = {
+  backgrounds: {
+    cover: 'assets/hero-bg.png', invitation: 'assets/invitation-frame.png',
+    scratch: 'assets/hero-bg.png', countdown: 'assets/countdown-bg.png',
+    events: 'assets/hero-bg.png', gallery: 'assets/hero-bg.png',
+    locations: 'assets/hero-bg.png'
+  },
+  envelope: { body: 'assets/opening-envelope.png', open: 'assets/open_envelope.png', letter: 'assets/openinvitewithletter.png',
+    seal: 'assets/wax-seal.png' },
+  scratch: { brush: 'assets/scratch-brush.png', hand: 'assets/tap-instruction.png' },
+  events: ['assets/event-sangeet.png','assets/event-haldi.png','assets/Ornate Indian Puja Kalash Still Life.png',
+    'assets/event-reception.png','assets/Ornate Golden Indian Wedding Mandap.png'],
+  gallery: { frame: 'assets/gallery-frame.png' },
+  locations: ['assets/venue-home.png','assets/venue-reception.png','assets/venue-mandap.png']
+};
+const assetPath = key => key.split('.').reduce((value, part) => value?.[part], ASSETS);
+document.querySelectorAll('[data-asset]').forEach(img => { const path = assetPath(img.dataset.asset); if(path) img.src = path; });
+Object.entries({cover:'cover',invitation:'invitation',scratch:'scratch',countdown:'countdown',events:'events',gallery:'gallery',locations:'locations'}).forEach(([cssKey,assetKey]) => {
+  document.documentElement.style.setProperty(`--bg-${cssKey}`, `url("${ASSETS.backgrounds[assetKey]}")`);
+});
+document.documentElement.style.setProperty('--bg-gallery', `url("${ASSETS.gallery.frame}")`);
+
+/* ======================== ASSET + CONTENT CONFIG ========================
+   Replace values here only. Empty map/photo values intentionally remain blank.
+*/
+const CONFIG = {
+  heroSubtitle: '', // Add the finalized hero subtitle when supplied.
+  blessingLine: '', // Reserved for the finalized blessing line; not currently displayed.
+  weddingISO: '2027-01-29T20:00:00+05:30',
+  photos: ['assets/hp1.jpg', 'assets/hp2.jpg', 'assets/hp3.jpg', 'assets/hp4.jpg', 'assets/hp5.jpg'],
+  maps: { home: '', reception: '', wedding: '' }
+};
+
+/* ======================== ENVELOPE STATE MACHINE ======================== */
+const envelope = document.getElementById('envelopeStage');
+const openButton = document.getElementById('openInvite');
+const tapInstruction = document.getElementById('tapInstruction');
+const openEnvelopeArt = document.querySelector('.envelope-open-art');
+const letterEnvelopeArt = document.querySelector('.envelope-letter-art');
+const sealArt = document.querySelector('.seal-art');
+const nav = document.getElementById('siteNav');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let envelopeState = 'loading';
+openButton.disabled = true;
+envelope.setAttribute('aria-busy', 'true');
+const wait = ms => new Promise(resolve => setTimeout(resolve, prefersReducedMotion ? 0 : ms));
+const imageReady = async image => {
+  if(!image.complete || !image.naturalWidth) {
+    await new Promise(resolve => {
+      image.addEventListener('load', resolve, {once:true});
+      image.addEventListener('error', resolve, {once:true});
+    });
+  }
+  if(image.naturalWidth && image.decode) await image.decode().catch(()=>{});
+};
+Promise.all([imageReady(openEnvelopeArt), imageReady(letterEnvelopeArt), imageReady(sealArt)]).then(() => {
+  envelopeState = 'closed';
+  openButton.disabled = false;
+  envelope.removeAttribute('aria-busy');
+});
+async function openEnvelope(){
+  if(envelopeState !== 'closed') return;
+  envelopeState = 'seal-release'; openButton.disabled = true;
+  envelope.classList.add('seal-released');
+  tapInstruction.querySelector('span').textContent = 'Opening your invitation';
+  await wait(430);
+  envelopeState = 'flap-open'; envelope.classList.add('flap-open');
+  await wait(850);
+  envelopeState = 'letter-emerging'; envelope.classList.add('letter-emerging');
+  await wait(1050);
+  envelopeState = 'letter-settling'; envelope.classList.add('letter-settled');
+  letterEnvelopeArt.setAttribute('aria-hidden', 'false');
+  envelope.querySelector('.letter-copy').setAttribute('aria-hidden', 'false');
+  await wait(700);
+  envelopeState = 'invitation-revealed';
+  envelope.classList.add('invitation-revealed','opened');
+  tapInstruction.querySelector('span').textContent = 'Your invitation awaits';
+  nav.classList.add('visible');
+  // Stay on the cover after the physical envelope sequence completes.
+}
+openButton.addEventListener('click', openEnvelope);
+
+/* ======================== COUNTDOWN — IST TARGET ======================== */
+const targetTime = new Date(CONFIG.weddingISO).getTime();
+const countdownEls = ['days','hours','minutes','seconds'].map(id=>document.getElementById(id));
+let countdownTimer = null;
+function updateCountdown(){
+  const remaining = Math.max(0, targetTime - Date.now());
+  const values = [Math.floor(remaining/86400000),Math.floor(remaining%86400000/3600000),Math.floor(remaining%3600000/60000),Math.floor(remaining%60000/1000)];
+  countdownEls.forEach((el,i)=>el.textContent=String(values[i]).padStart(2,'0'));
+  if(targetTime <= Date.now() && countdownTimer){clearInterval(countdownTimer);countdownTimer=null;}
+}
+updateCountdown(); countdownTimer = setInterval(updateCountdown,1000);
+
+/* ======================== SCRATCH REVEAL — POINTER / TOUCH / STYLUS ======================== */
+const scratchCanvas = document.getElementById('scratchCanvas');
+const scratchPad = document.getElementById('scratchPad');
+const scratchCtx = scratchCanvas.getContext('2d',{willReadFrequently:true});
+const brushImage = new Image(); brushImage.src = ASSETS.scratch.brush;
+let isScratching=false, scratchComplete=false, scratchPoints=0, lastSample=0;
+function sizeScratchCanvas(){
+  if(scratchComplete || scratchPoints>0) return;
+  const rect=scratchPad.getBoundingClientRect(), dpr=Math.min(window.devicePixelRatio||1,2);
+  if(!rect.width||!rect.height)return;
+  scratchCanvas.width=Math.round(rect.width*dpr); scratchCanvas.height=Math.round(rect.height*dpr);
+  scratchCanvas.style.width=rect.width+'px'; scratchCanvas.style.height=rect.height+'px';
+  scratchCtx.setTransform(dpr,0,0,dpr,0,0); scratchCtx.globalCompositeOperation='source-over';
+  scratchCtx.clearRect(0,0,rect.width,rect.height);
+  if(brushImage.complete&&brushImage.naturalWidth){
+    const scale=Math.min(rect.width/brushImage.naturalWidth,rect.height/brushImage.naturalHeight);
+    const w=brushImage.naturalWidth*scale,h=brushImage.naturalHeight*scale;
+    scratchCtx.drawImage(brushImage,(rect.width-w)/2,(rect.height-h)/2,w,h);
+  } else {scratchCtx.fillStyle='#bd8746';scratchCtx.fillRect(0,0,rect.width,rect.height);}
+  scratchCtx.globalCompositeOperation='source-over';
+  scratchCtx.fillStyle='#fff6e6';scratchCtx.textAlign='center';scratchCtx.shadowColor='#70451f';scratchCtx.shadowBlur=3;
+  scratchCtx.font='italic 19px Georgia';scratchCtx.fillText('Scratch to reveal',rect.width/2,rect.height/2-2);
+  scratchCtx.font='9px Arial';scratchCtx.fillText('✧  OUR WEDDING DATE  ✧',rect.width/2,rect.height/2+18);
+  scratchCtx.shadowBlur=0;
+}
+function scratchAt(event){
+  if(!isScratching||scratchComplete)return;
+  const r=scratchCanvas.getBoundingClientRect();
+  const x=event.clientX-r.left,y=event.clientY-r.top;
+  scratchCtx.globalCompositeOperation='destination-out';scratchCtx.beginPath();
+  scratchCtx.arc(x,y,Math.max(19,Math.min(27,r.width*.06)),0,Math.PI*2);scratchCtx.fill();
+  scratchPoints++;
+  if(scratchPoints%10===0)checkScratchProgress();
+}
+function checkScratchProgress(){
+  const data=scratchCtx.getImageData(0,0,scratchCanvas.width,scratchCanvas.height).data;
+  let transparent=0,total=0;
+  // Sample every 16th pixel to keep mobile work bounded.
+  for(let i=3;i<data.length;i+=64){total++;if(data[i]<24)transparent++;}
+  if(total && transparent/total >= .60){scratchComplete=true;scratchPad.classList.add('done');}
+}
+scratchCanvas.addEventListener('pointerdown',e=>{if(scratchComplete)return;isScratching=true;scratchCanvas.setPointerCapture(e.pointerId);scratchAt(e);});
+scratchCanvas.addEventListener('pointermove',scratchAt);
+['pointerup','pointercancel','lostpointercapture'].forEach(type=>scratchCanvas.addEventListener(type,()=>{if(isScratching){isScratching=false;checkScratchProgress();}}));
+brushImage.addEventListener('load',sizeScratchCanvas);
+if('ResizeObserver'in window)new ResizeObserver(()=>{if(!isScratching)sizeScratchCanvas();}).observe(scratchPad);else window.addEventListener('resize',sizeScratchCanvas);
+sizeScratchCanvas();
+
+/* ======================== GALLERY PHOTOS ======================== */
+CONFIG.photos.forEach((src,index)=>{
+  if(!src)return;
+  const slot=document.querySelector(`[data-photo="${index}"]`); if(!slot)return;
+  const img=document.createElement('img');img.src=src;img.alt=`Herin and Preya photograph ${index+1}`;img.loading='lazy';
+  img.onerror=()=>{img.remove();};slot.querySelector('.placeholder')?.remove();slot.appendChild(img);
+});
+
+/* ======================== MAP LINKS ========================
+   Keep the URLs on the anchors so they remain usable without JavaScript.
+   Desktop browsers get a new tab; mobile browsers keep the normal Google
+   Maps universal link, allowing the installed Maps app to handle it. */
+const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+  || (navigator.maxTouchPoints > 1 && /Macintosh/i.test(navigator.userAgent));
+document.querySelectorAll('[data-map]').forEach(link=>{
+  const url = CONFIG.maps[link.dataset.map] || link.getAttribute('href');
+  if(!url) {
+    link.addEventListener('click', event=>event.preventDefault());
+    link.setAttribute('aria-disabled','true');
+    return;
+  }
+
+  link.href = url;
+  if(isMobileDevice) {
+    link.removeAttribute('target');
+    link.removeAttribute('rel');
+  } else {
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  }
+});
+
+/* ======================== REVEALS + NAVIGATION ======================== */
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+const navObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.target.id!=='cover')nav.classList.toggle('visible',entry.isIntersecting||envelopeState==='invitation-revealed');});
+},{threshold:.18});
+document.querySelectorAll('.page').forEach(page=>navObserver.observe(page));
+if(CONFIG.heroSubtitle){document.getElementById('heroSubtitle').textContent=CONFIG.heroSubtitle;}
+window.addEventListener('pagehide',()=>{if(countdownTimer)clearInterval(countdownTimer);revealObserver.disconnect();navObserver.disconnect();},{once:true});
+</script>
+</body>
+</html>
